@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path Finding Visualizer</title>
+    <link rel="stylesheet" href="../css/PathFindingVisualizer.css">
+</head>
+<body>
+    <div class = "outer">
+        <canvas id="grid_canvas"></canvas>
+
+        <form id="setup-form">
+            <label for="startx">Starting Position (x,y):</label><br><br>
+            <input type="text" id="sx_box" name="sx_box" value="10">
+
+            <label> , </label>
+            <input type="text" id="sy_box" name="sy_box" value="10"><br><br>
+
+            <label for="endx">Ending Position (x,y):</label><br><br>
+            <input type="text" id="ex_box" name="ex_box" value="50">
+
+            <label> , </label>
+            <input type="text" id="ey_box" name="ey_box" value="50"><br><br>
+
+            <input type="submit" value="Reset">
+            <input type="submit" value="Run Algorithm">
+          </form> 
+    </div>
+    <script src="../js/PathFIndingVisualizer.js"></script>
+</body>
+</html>

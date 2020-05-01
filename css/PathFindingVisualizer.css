@@ -1,0 +1,32 @@
+canvas {
+    border: 2px solid black;
+    margin: 0;
+}
+
+div.outer {
+    display: flex;
+}
+
+
+
+div form {
+    
+    margin: auto;
+    text-align: center;
+    
+}
+
+input[type="text"] {
+
+    width: 5ch;
+    height: 30px;
+    font-size: auto;
+    text-align: center;
+    
+}
+
+label {
+
+    font-size: 20px;
+   
+}
