@@ -7,7 +7,15 @@ div.outer {
     display: flex;
 }
 
+button.bigbutton {
 
+        font-size: 30px;
+        width: fit-content;
+        margin: 10px;
+        height: fit-content;
+        background-color: honeydew;
+        border: 1px solid black;
+}
 
 div form {
     
@@ -16,13 +24,13 @@ div form {
     
 }
 
-input[type="text"] {
+input[type="text"], input[type="text"]:focus {
 
     width: 5ch;
     height: 30px;
     font-size: auto;
     text-align: center;
-    
+    border: 1px solid black;
 }
 
 label {

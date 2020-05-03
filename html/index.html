@@ -8,25 +8,31 @@
 </head>
 <body>
     <div class = "outer">
-        <canvas id="grid_canvas"></canvas>
+        <canvas id="gridCanvas"></canvas>
 
         <form id="setup-form">
-            <label for="startx">Starting Position (x,y):</label><br><br>
-            <input type="text" id="sx_box" name="sx_box" value="10">
+            <label for="start">Starting Position (x,y):</label><br><br>
+            <input type="text" id="sxBox" name="sxBox" value="10">
 
             <label> , </label>
-            <input type="text" id="sy_box" name="sy_box" value="10"><br><br>
+            <input type="text" id="syBox" name="syBox" value="10">
+            <button id="setStartBtn" type="button">SET</button><br><br>
 
-            <label for="endx">Ending Position (x,y):</label><br><br>
-            <input type="text" id="ex_box" name="ex_box" value="50">
+            <label for="end">Ending Position (x,y):</label><br><br>
+            <input type="text" id="exBox" name="exBox" value="50">
 
             <label> , </label>
-            <input type="text" id="ey_box" name="ey_box" value="50"><br><br>
+            <input type="text" id="eyBox" name="eyBox" value="50">
+            <button id="setEndBtn" type="button">SET</button><br><br>
 
-            <input type="submit" value="Reset">
-            <input type="submit" value="Run Algorithm">
+            <button class= "bigbutton" id="resetButton" type="button">Reset</button><br><br>
+            <button class="bigbutton" id="runAlgorithmButton" type="button">Run Algorithm</button><br><br>
+
+            <label for="visualize">visualize</label> <input type="checkbox" id="visualizeCheckBox">
           </form> 
     </div>
-    <script src="../js/PathFIndingVisualizer.js"></script>
+    <script src="../js/AStar.js" type="text/javascript"></script>
+    <script src="../js/PathFIndingVisualizer.js" type="text/javascript"></script>
+    
 </body>
 </html>
