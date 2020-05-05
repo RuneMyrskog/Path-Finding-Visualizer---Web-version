@@ -3,8 +3,52 @@ canvas {
     margin: 0;
 }
 
-div.outer {
+/*
+================NEWAPPROACH================
+*/
+#board {
+
+    border: 1px solid black;
+
+}
+
+
+#board .row {
+    display:flex;
+}
+
+#board .row .block {
+    margin: 0px;
+    border: 1px solid black;
+}
+
+
+
+/*
+================NEWAPPROACH================
+*/
+
+#outer {
     display: flex;
+}
+
+#positions-box {
+
+    border: 2px solid rebeccapurple;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+
+#positions-box div {
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        justify-content: center;
+}
+
+button.setbutton {
+    font-size: 15px;
+    margin-left: 10px;
 }
 
 button.bigbutton {
@@ -17,9 +61,9 @@ button.bigbutton {
         border: 1px solid black;
 }
 
-div form {
-    
-    margin: auto;
+#setup-form {
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     
 }

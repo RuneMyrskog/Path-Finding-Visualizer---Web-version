@@ -7,29 +7,42 @@
     <link rel="stylesheet" href="../css/PathFindingVisualizer.css">
 </head>
 <body>
-    <div class = "outer">
+    <div id="outer">
         <canvas id="gridCanvas"></canvas>
 
+        
         <form id="setup-form">
-            <label for="start">Starting Position (x,y):</label><br><br>
-            <input type="text" id="sxBox" name="sxBox" value="10">
+            <div id="positions-box">
 
-            <label> , </label>
-            <input type="text" id="syBox" name="syBox" value="10">
-            <button id="setStartBtn" type="button">SET</button><br><br>
+                <div>
+                    <label for="start">Starting Position (x,y):</label>
+                </div>
 
-            <label for="end">Ending Position (x,y):</label><br><br>
-            <input type="text" id="exBox" name="exBox" value="50">
+                <div>
+                    <input type="text" id="sxBox" name="sxBox" value="10">
+                    <input type="text" id="syBox" name="syBox" value="10">
+                    <button id="setStartBtn" class="setbutton" type="button">SET</button><br><br>
+                </div>
 
-            <label> , </label>
-            <input type="text" id="eyBox" name="eyBox" value="50">
-            <button id="setEndBtn" type="button">SET</button><br><br>
+                <div>
+                    <label for="end">Ending Position (x,y):</label>
+                </div>
+
+                <div>
+                    <input type="text" id="exBox" name="exBox" value="50">
+                    <input type="text" id="eyBox" name="eyBox" value="50">
+                    <button id="setEndBtn" class="setbutton" type="button">SET</button><br><br>
+                </div>
+
+            </div>
 
             <button class= "bigbutton" id="resetButton" type="button">Reset</button><br><br>
             <button class="bigbutton" id="runAlgorithmButton" type="button">Run Algorithm</button><br><br>
-
             <label for="visualize">visualize</label> <input type="checkbox" id="visualizeCheckBox">
-          </form> 
+            <label for="keepobstacles">keep obsticles</label> <input type="checkbox" id="keepObsticlesCheckBox">
+
+        </form> 
+        
     </div>
     <script src="../js/AStar.js" type="text/javascript"></script>
     <script src="../js/PathFIndingVisualizer.js" type="text/javascript"></script>

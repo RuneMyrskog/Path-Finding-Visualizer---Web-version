@@ -15,11 +15,11 @@ var exBox = document.getElementById("exBox")
 var eyBox = document.getElementById("eyBox")
 
 var visualizeCheckBox = document.getElementById("visualizeCheckBox")
+var keepObsticlesCheckBox = document.getElementById("keepObsticlesCheckBox")
+
 document.getElementById("setStartBtn").onclick = document.getElementById("setEndBtn").onclick = function(e){if(!running){setEndPoint(e)}}
 document.getElementById("resetButton").onclick = reset
 document.getElementById("runAlgorithmButton").onclick = function(){if(!running)runAlgorithm()}
-
-
 
 var mouseIsDown = false
 canvas.addEventListener("mousedown", function mousedown(e){mouseIsDown=true;if(!running)editGrid(e)})
@@ -28,7 +28,7 @@ canvas.addEventListener("mouseup", function mouseup(){mouseIsDown = false})
 
 const OPENCOLOR = "#00FF00"
 const CLOSEDCOLOR = "#FF0000"
-const PATHCOLOR = "#fc9403"
+const PATHCOLOR = "#fff700"
 const UNBLOCKEDCOLOR = "#AA00FF"
 const BACKGROUNDCOLOR = "#000000"
 const BLOCKEDCOLOR = "#000000"
@@ -97,18 +97,30 @@ function isValidEntry(entryBoxes){
 
 
 function reset(){
-    grid = []
     running = false
-    for (let i = 0; i < COLS; i ++){
-        let row = []
-        for(let j = 0; j < ROWS; j++){
-            if(isEndpoint({x: i, y: j})){
-                row.push(PATH)
-            }else{      
-            row.push(UNBLOCKED)
+    if(keepObsticlesCheckBox.checked){
+        for(let i = 0; i < COLS; i++){
+            for(let j = 0; j < ROWS; j++){
+                if(!isEndpoint({x: i, y: j})){
+                    if(grid[i][j] != BLOCKED){
+                        grid[i][j] = UNBLOCKED
+                    }
+                }
             }
         }
-        grid.push(row)
+    }else{
+        grid = []
+        for (let i = 0; i < COLS; i ++){
+            let row = []
+            for(let j = 0; j < ROWS; j++){
+                if(isEndpoint({x: i, y: j})){
+                    row.push(PATH)
+                }else{      
+                    row.push(UNBLOCKED)
+                }
+            }
+            grid.push(row)
+        }
     }
     refreshGrid()
 }
@@ -130,7 +142,6 @@ function runAlgorithm(){
         aStarVisualize(openSet)
     }else{
         paintPath(aStarAlgorithm(grid, startPos, endPos))
-        
     }
 }
 
@@ -143,10 +154,16 @@ function aStarVisualize(openSet){
             break
         }
     }
-    if(!finished)setTimeout(function(){aStarVisualize(openSet)}, 1000/60)
+    if(!finished)setTimeout(function(){aStarVisualize(openSet)}, 1000/30)
     refreshGrid()
     
 }
+
+/*
+function sleep(ms){
+    return new Promise(resolve => setTimeout(resolve,ms))
+}
+*/
 
 function paintPath(path){
     for(let i = 0; i < path.length; i++){
