@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path Finding Visualizer</title>
+    <link rel="stylesheet" href="../css/PathFindingVisualizer.css">
+    <script src="../js/AStar.js" type="text/javascript" defer></script>
+    <script src="../js/PathFIndingVisualizer.js" type="text/javascript" defer></script>
+</head>
+<body>
+    <div id="outer">
+        <canvas id="gridCanvas"></canvas>
+
+        <div id="rightContainer">
+            <div id="instructionsContainer">
+                <p>
+                    This project is a visualization of the 
+                    <br/>
+                        <strong>A-Star path finding algorithm. </strong>
+                    <br/>
+                    All you need to do to play around with it is draw some obstacles onto 
+                    the grid with the mouse and press the Run Algorithm. Thats it, its super
+                    easy to use! You can also move around the start and end positions using
+                    the form on the right. 
+                    <br/>
+                    <strong>Try it!</strong>
+                </p>
+            </div>
+            <form id="setup-form">
+                <div id="positions-box">
+
+                    <div>
+                        <label for="start">Starting Position (x,y):</label>
+                    </div>
+
+                    <div>
+                        <input type="text" id="sxBox" name="sxBox" value="10">
+                        <input type="text" id="syBox" name="syBox" value="10">
+                        <button id="setStartBtn" class="setbutton" type="button">SET</button><br><br>
+                    </div>
+
+                    <div>
+                        <label for="end">Ending Position (x,y):</label>
+                    </div>
+
+                    <div>
+                        <input type="text" id="exBox" name="exBox" value="50">
+                        <input type="text" id="eyBox" name="eyBox" value="50">
+                        <button id="setEndBtn" class="setbutton" type="button">SET</button><br><br>
+                    </div>
+
+                </div>
+
+                <button class= "bigbutton" id="resetButton" type="button">Reset</button><br><br>
+                <button class="bigbutton" id="runAlgorithmButton" type="button">Run Algorithm</button><br><br>
+                <label for="visualize">visualize</label> <input type="checkbox" checked=true id="visualizeCheckBox">
+                <label for="keepobstacles">keep obsticles</label> <input type="checkbox" id="keepObsticlesCheckBox">
+
+            </form> 
+        </div>
+        
+    </div>
+    
+    
+</body>
+</html>

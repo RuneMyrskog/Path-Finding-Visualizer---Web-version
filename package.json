@@ -1,0 +1,23 @@
+{
+  "name": "pathfindingvisualizer---static-web-page-version",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuneMyrskog/PathFindingVisualizer---static-web-page-version.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RuneMyrskog/PathFindingVisualizer---static-web-page-version/issues"
+  },
+  "homepage": "https://github.com/RuneMyrskog/PathFindingVisualizer---static-web-page-version#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
