@@ -1,14 +1,13 @@
 #gridCanvas {
-    border: 2px solid black;
+    border: 0.5vmin solid black;
     margin: 0;
     padding: 5px;
     background-color: black;
     border-radius: 5px;
+    width: 80%
 }
 
-/*
-================NEWAPPROACH================
-*/
+
 #board {
 
     border: 1px solid black;
@@ -30,9 +29,16 @@
 /*
 ================NEWAPPROACH================
 */
+@media (min-width:320px) {
+    #outer {
+        text-align: center;
+    }
+}
 
-#outer {
-    display: flex;
+@media (min-width:1000px) {
+    #outer {
+        display: flex;
+    }
 }
 
 #positions-box {
