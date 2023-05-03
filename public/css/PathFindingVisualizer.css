@@ -7,7 +7,9 @@
     width: 80%
 }
 
-
+body {
+    background-image: linear-gradient(lightblue, darkblue);
+}
 #board {
 
     border: 1px solid black;
@@ -73,8 +75,9 @@ button.bigbutton {
     margin-right: auto;
     text-align: center;
     padding: 2vh;
-    border: 10px solid rebeccapurple;
+    border: 10px solid white;
     border-radius: 10px;
+    color: white;
     
 }
 
@@ -98,6 +101,7 @@ label {
     justify-content: space-around;
     max-height: 100vh;
     margin: auto;
+    color: rgb(58, 0, 81);
 }
 
 #instructionsContainer {
